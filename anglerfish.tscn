@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ddvmnu5cqe8wq" path="res://anglerfish2.png" id="3_vlvs4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4s1s"]
-size = Vector2(381, 273)
+size = Vector2(100, 58.5)
 
 [node name="Anglerfish" type="Area2D"]
 collision_layer = 2
@@ -18,7 +18,7 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_s682c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -1)
+position = Vector2(1.5, 3)
 shape = SubResource("RectangleShape2D_f4s1s")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]

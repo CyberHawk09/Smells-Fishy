@@ -60,7 +60,7 @@ func check_drag():
 		target_pos = Vector2(98, -283)
 	if global_position.y < -250:
 		queue_free()
-		GameManager.add_score(-10)
+		GameManager.add_score(30)
 	# Move the fish towards that target position smoothly
 	# 0.1 is the weight; higher = stiffer line, lower = more "drag"
 	global_position = global_position.lerp(target_pos, drag)

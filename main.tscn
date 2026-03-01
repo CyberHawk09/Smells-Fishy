@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bnxir51wjnvb5" path="res://renewnote/29 Background Removed.png" id="9_4c57u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
-size = Vector2(50, 128)
+size = Vector2(69, 61)
 
 [node name="main" type="Node2D"]
 
@@ -52,7 +52,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_efxa6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hook"]
-position = Vector2(-10, 25)
+position = Vector2(-26.5, 117.5)
 shape = SubResource("RectangleShape2D_0hol4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

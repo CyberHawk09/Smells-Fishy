@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpl38y2q64yk0"]
+[gd_scene load_steps=6 format=3 uid="uid://dpl38y2q64yk0"]
 
 [ext_resource type="Script" uid="uid://drn58ob63bqxf" path="res://title.gd" id="1_kpexm"]
 [ext_resource type="Texture2D" uid="uid://bo47ot3dsiexy" path="res://beach.png" id="2_3xoar"]
 [ext_resource type="FontFile" uid="uid://daatrbbo8bp3s" path="res://BigParty4Blue.ttf" id="3_mom7w"]
+[ext_resource type="Texture2D" uid="uid://p6500rvc3u8i" path="res://renewnote/24 Background Removed.png" id="4_mom7w"]
+[ext_resource type="Texture2D" uid="uid://dqyssme7tyr2q" path="res://renewnote/23 Background Removed.png" id="5_7lgly"]
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_kpexm")
@@ -44,3 +46,13 @@ theme_override_font_sizes/font_size = 160
 text = "Smells FISHY!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="24BackgroundRemoved" type="Sprite2D" parent="."]
+position = Vector2(939, 419)
+rotation = -0.2443461
+texture = ExtResource("4_mom7w")
+
+[node name="23BackgroundRemoved" type="Sprite2D" parent="."]
+position = Vector2(209, 404)
+texture = ExtResource("5_7lgly")
+flip_h = true
