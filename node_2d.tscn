@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnbminr0gekky"]
+
+[ext_resource type="Script" uid="uid://bqp1cryn2ev7t" path="res://hook.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://c1bcrt7acf6fd" path="res://node_2d.gd" id="1_0hol4"]
+[ext_resource type="Script" uid="uid://cs5ellj6ujdp8" path="res://camera_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://cit8m4r5yk7wk" path="res://icon.svg" id="2_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+size = Vector2(128, 128)
+
+[node name="main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("1_epypp")
+player = NodePath("../Hook")
+
+[node name="Hook" type="Area2D" parent="."]
+position = Vector2(0, -1)
+script = ExtResource("1_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hook"]
+position = Vector2(0, 1)
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hook"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(204, 230)
+texture = ExtResource("2_epypp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1215, 58)
+texture = ExtResource("2_epypp")
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("1_0hol4")

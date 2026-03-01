@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu67vmgn7p026"]
+
+[ext_resource type="Script" uid="uid://y1nitwpm2pgv" path="res://pufferfish.gd" id="1_vxifd"]
+[ext_resource type="Texture2D" uid="uid://b0wu5g4w8uvh7" path="res://renewnote/17 Background Removed.png" id="2_vxifd"]
+[ext_resource type="Texture2D" uid="uid://b56vsw6mob81e" path="res://pufferfish2.png" id="3_3esq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4s1s"]
+size = Vector2(381, 273)
+
+[node name="Pufferfish" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_vxifd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vxifd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 12.5)
+shape = SubResource("RectangleShape2D_f4s1s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0.99999994, 19.999998)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("3_3esq0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

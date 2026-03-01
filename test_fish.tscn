@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cti4808x75cq5"]
+
+[ext_resource type="Texture2D" uid="uid://cit8m4r5yk7wk" path="res://icon.svg" id="1_f4s1s"]
+[ext_resource type="Script" uid="uid://bcp3sle17ks0b" path="res://test_fish.gd" id="1_v3vf8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4s1s"]
+size = Vector2(128, 128)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_v3vf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f4s1s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f4s1s")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

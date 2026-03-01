@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1f3bp7gnh1ux"]
+
+[ext_resource type="Script" uid="uid://b3u8baj6ttia" path="res://anglerfish.gd" id="1_vlvs4"]
+[ext_resource type="Texture2D" uid="uid://chop7qretohc0" path="res://renewnote/25 Background Removed.png" id="2_s682c"]
+[ext_resource type="Texture2D" uid="uid://ddvmnu5cqe8wq" path="res://anglerfish2.png" id="3_vlvs4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4s1s"]
+size = Vector2(381, 273)
+
+[node name="Anglerfish" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_vlvs4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-12.999999, -10)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_s682c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_f4s1s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-1, -18)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_vlvs4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

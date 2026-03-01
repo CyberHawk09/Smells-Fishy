@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://c08w52v3rjx0u"]
+
+[ext_resource type="Script" uid="uid://cs5ellj6ujdp8" path="res://camera_2d.gd" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://df250lu2hi2c8" path="res://another_bg.PNG" id="1_dg77c"]
+[ext_resource type="Script" uid="uid://bqp1cryn2ev7t" path="res://hook.gd" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://cit8m4r5yk7wk" path="res://icon.svg" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://c1bcrt7acf6fd" path="res://node_2d.gd" id="4_272bh"]
+[ext_resource type="Texture2D" uid="uid://dk4en4avf7t23" path="res://hook.png" id="4_efxa6"]
+[ext_resource type="Script" uid="uid://b5rt6ula2d0wx" path="res://fisher.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://2k6joffk0rdf" path="res://scoreboard.gd" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://bapso3hm1wh6r" path="res://line_2.gd" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://cvueg3faabwr8" path="res://renewnote/30 Background Removed.png" id="8_kek77"]
+[ext_resource type="Texture2D" uid="uid://bnxir51wjnvb5" path="res://renewnote/29 Background Removed.png" id="9_4c57u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+size = Vector2(50, 128)
+
+[node name="main" type="Node2D"]
+
+[node name="AnotherBg4" type="Sprite2D" parent="."]
+position = Vector2(-1, 7426.0005)
+scale = Vector2(3.7018633, 5.180357)
+texture = ExtResource("1_dg77c")
+
+[node name="AnotherBg3" type="Sprite2D" parent="."]
+position = Vector2(16, 5359)
+scale = Vector2(3.7018633, 5.180357)
+texture = ExtResource("1_dg77c")
+
+[node name="AnotherBg2" type="Sprite2D" parent="."]
+position = Vector2(16, 3005)
+scale = Vector2(3.7018633, 5.180357)
+texture = ExtResource("1_dg77c")
+
+[node name="AnotherBg" type="Sprite2D" parent="."]
+position = Vector2(16.000002, 1029.0001)
+scale = Vector2(3.7018633, 5.180357)
+texture = ExtResource("1_dg77c")
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("1_1bvp3")
+player = NodePath("../Hook")
+
+[node name="Hook" type="Area2D" parent="." groups=["player_hook"]]
+top_level = true
+position = Vector2(0, -1)
+script = ExtResource("2_lquwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hook"]
+position = Vector2(-30, 35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_efxa6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hook"]
+position = Vector2(-10, 25)
+shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 295)
+texture = ExtResource("3_7mycd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-272.5, 4212.5)
+scale = Vector2(1.4453124, 64.47656)
+texture = ExtResource("3_7mycd")
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(0, -150)
+script = ExtResource("4_272bh")
+
+[node name="Scoreboard" type="Label" parent="."]
+offset_left = -565.0
+offset_top = -319.0
+offset_right = -271.0
+offset_bottom = -260.0
+theme_override_colors/font_color = Color(0, 0.71987695, 0.8411379, 1)
+theme_override_font_sizes/font_size = 30
+script = ExtResource("6_7mycd")
+
+[node name="Fisher" type="Node2D" parent="."]
+position = Vector2(98, -283)
+script = ExtResource("5_lquwl")
+
+[node name="Casts" type="Label" parent="Fisher"]
+offset_left = -657.0
+offset_top = 43.0
+offset_right = -617.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0, 0.72156864, 0.8392157, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="Line2" type="Node2D" parent="."]
+script = ExtResource("8_5vw27")
+
+[node name="30BackgroundRemoved" type="Sprite2D" parent="."]
+position = Vector2(259, -31)
+texture = ExtResource("8_kek77")
+
+[node name="29BackgroundRemoved" type="Sprite2D" parent="."]
+position = Vector2(193, -147)
+texture = ExtResource("9_4c57u")

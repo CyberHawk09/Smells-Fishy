@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpl38y2q64yk0"]
+
+[ext_resource type="Script" uid="uid://drn58ob63bqxf" path="res://title.gd" id="1_kpexm"]
+[ext_resource type="Texture2D" uid="uid://bo47ot3dsiexy" path="res://beach.png" id="2_3xoar"]
+[ext_resource type="FontFile" uid="uid://daatrbbo8bp3s" path="res://BigParty4Blue.ttf" id="3_mom7w"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_kpexm")
+
+[node name="Beach" type="Sprite2D" parent="."]
+position = Vector2(577.50006, 326.5)
+scale = Vector2(0.810153, 0.81311876)
+texture = ExtResource("2_3xoar")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 336.0
+offset_top = 549.0
+offset_right = 842.0
+offset_bottom = 647.0
+theme_override_fonts/font = ExtResource("3_mom7w")
+theme_override_font_sizes/font_size = 50
+text = "Press Spacebar to continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 206.0
+offset_top = 156.0
+offset_right = 970.0
+offset_bottom = 254.0
+theme_override_fonts/font = ExtResource("3_mom7w")
+theme_override_font_sizes/font_size = 50
+text = "3 tries to catch as many fish as possible"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 222.0
+offset_top = 24.0
+offset_right = 956.0
+offset_bottom = 185.0
+theme_override_fonts/font = ExtResource("3_mom7w")
+theme_override_font_sizes/font_size = 160
+text = "Smells FISHY!"
+horizontal_alignment = 1
+vertical_alignment = 1
